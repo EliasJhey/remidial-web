@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block judul %} Berita Terkini {% endblock %}
+{% block konten %}
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>NIM</th>
+            <th>Nama</th>
+            <th>Jenis Kelamin</th>
+            <th>Jurusan</th>
+            <th>Alamat</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in hasil %}
+        <tr>
+            <td>{{row.1}}</td>
+            <td>{{row.2}}</td>
+            <td>{{row.3}}</td>
+            <td>{{row.4}}</td>
+            <td>{{row.5}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
